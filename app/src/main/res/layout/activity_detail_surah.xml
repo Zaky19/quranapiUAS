@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DetailSurah"
+    android:background="#FFD700">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:padding="20dp"
+        android:background="@drawable/sini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:textColor="#000000 "
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="5dp"
+            android:textSize="25sp"
+            android:text="Al-Qur'an"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_below="@+id/first"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="Total Ayat" />
+
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/arab"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/total"
+            android:text="Arabic" />
+
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/surat"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/arab"
+            android:text="Nama Surat" />
+
+        <TextView
+            android:id="@+id/no1"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:text="Nomor" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="410dp"
+        android:layout_height="501dp"
+        android:layout_marginTop="234dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tvAyat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="268dp" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/tekan"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="189dp"
+        android:text="Audio"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
